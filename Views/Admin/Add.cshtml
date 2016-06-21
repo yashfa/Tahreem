@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Add";
+}
+
+
+@{
+   
+    if (IsPost)
+    {
+        var sub_name = Request["sub_name"];
+        var code_num = Request["code_num"];
+
+        var color = Request["color"];
+        var size = Request["size"];
+
+        var stock = Request["stock"];
+        var t_amount = Request["t_amount"];
+
+        Response.Redirect("~/Admin/SaveProductAdmin");
+        
+    }
+
+
+}
+
+
+<!---->
+<div class="container">
+    <h6 class="dress"><a href="../../Admin/Index">Admin</a> <i> </i> Add</h6>
+</div>
+<div class="back">
+    <h2>Add</h2>
+</div>
+<!---->
+<div class="container">
+    <div class="account_grid">
+        <div class=" login-right">
+            <h3>Add An Item</h3>
+
+            <form action="/Admin/SaveProductAdmin" method="POST" >
+
+                <strong>Product Name</strong><br>
+                <input type="Text" id="sub_name" name="sub_name" class="form-control" placeholder="Enter Product Name" required />
+                <span id="name1"></span><br>
+
+                <strong>Code Number</strong><br>
+                <input type="Text" id="code_num" name="code_num" class="form-control" placeholder="Enter Code " required />
+                <span id="name1"></span><br>
+
+                <strong>Size</strong><br>
+                <input type="Text" name="size" class="form-control" placeholder="Enter Size" required />
+             
+
+                <strong>Color</strong><br>
+                <input type="Text" name="color" class="form-control" placeholder="Enter Color" required />
+                <br>
+
+                <strong> Stock </strong><br>
+                <input type="Text" name="stock" class="form-control" placeholder="Enter Total Stock" required />
+                <br>
+
+                <strong>Total Price Of Stock:</strong> <br /> <br />
+                <input type="Text" name="t_amount" class="form-control" placeholder="Enter Total Price" required />
+                <br>
+
+                <input type="file" name="image" /> <br /> <br>  <br />
+
+                <button type="submit" class="btn btn-primary btn-block" value="submit"> Done </button> <br />
+
+
+            </form>
+            
+        </div>
+
+        <a class="go" href="../../Admin/Index"> BACK </a>
+    </div>
+
+</div>
+<!---->
+

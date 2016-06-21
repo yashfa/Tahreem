@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Update";
+}
+
+@model Shoe_Store.Models.product
+
+
+<!---->
+<div class="container">
+    <h6 class="dress"><a href="../../Admin/Index">Admin </a> <i> </i> UpDate </h6>
+</div>
+<div class="back">
+    <h2>UpDate</h2>
+</div>
+<!---->
+<div class="container">
+    <div class="account_grid">
+        <div class=" login-right">
+            <h3>UpDate An Item</h3>
+
+            <form action="/Admin/EditOK/@Model.p_Id" method="POST">
+
+                <strong>Product Name</strong><br>
+                <input type="Text" id="sub_ncame" name="sub_cname" class="form-control" placeholder="Enter Product Name" value="@Model.sub_name" required  />
+                <span id="name1"></span><br>
+
+                <strong>Code Number</strong><br>
+                <input type="Text" id="code_num" name="code_num" class="form-control" placeholder="Enter Code" value="@Model.code_num" required />
+                <span id="name1"></span><br>
+
+                <strong>Size</strong><br>
+                <input type="Text" name="size" class="form-control" placeholder="Enter Size" value="@Model.size"  required />
+
+
+                <strong>Color</strong><br>
+                <input type="Text" name="color" class="form-control" placeholder="Enter Color" value="@Model.color"  required />
+                <br>
+
+                <strong> Stock </strong><br>
+                <input type="Text" name="stock" class="form-control" placeholder="Enter Total Stock" value="@Model.stock"  required />
+                <br>
+
+                <strong>Total Price Of Stock:</strong> <br /> <br />
+                <input type="Text" name="t_amount" class="form-control" placeholder="Enter Total Price" value="@Model.t_amount" required />
+                <br>
+
+                <input type="file" name="image" /> <br /> <br>  <br />
+
+                <button type="submit" class="btn btn-primary btn-block" value="submit"> Done </button> <br />
+
+
+                
+
+
+            </form>
+        </div>
+        <a class="go" href="../../Admin/Index"> BACK </a>
+
+    </div>
+
+</div>
+<!---->
+
+<!---->

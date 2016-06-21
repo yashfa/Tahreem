@@ -1,0 +1,211 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="container">
+<div class="col-md-3 product-price">
+
+    <div class=" rsidebar span_1_of_left">
+        <div class="of-left">
+            <h3 class="cate">Admin Page</h3>
+        </div>
+        <ul class="menu">
+            <li class="item1">
+                <ul class="cute">
+                    <li class="subitem1"><a href="../../Admin/Add">Add Item </a></li>
+                    <li class="subitem3"><a href="../../Admin/Update">UpDate Item  </a></li>
+                    <li class="subitem3"><a href="../../Home/Account">Logout  </a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!---->
+    
+    <!---->
+    <div class="product-bottom">
+        
+        
+        
+        <div class="product-go">
+            
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    
+</div>
+
+    <br /> <br /><h3> <a href="/AdminHome/Add">&nbsp; &nbsp; &nbsp; Add new Products ? </a></h3>
+    <h2>&nbsp; &nbsp; &nbsp; List of all Products  <br /> <br /> </h2>
+
+    <div class="table-responsive">
+        <table class="table" style="background:#5499C7;padding:10px;width:95%;border-radius:10px;margin-left:30px">
+            <thead>
+                <tr>
+                    <td style="padding-left:10px"><br />&nbsp; ID <br /><br /></td>
+                    <td><br />&nbsp; user_Id <br /><br /></td>
+                    <td><br />&nbsp; C_Name <br /><br /></td>
+                    <td><br />&nbsp; Sub_Category <br /><br /></td>
+                    <td><br /> &nbsp; Code_N0 <br /><br /> </td>
+                    <td><br /> &nbsp; Size <br /><br /> </td>
+                    <td><br /> &nbsp; Color <br /><br /> </td>
+                    <td><br /> &nbsp; Stock <br /><br /> </td>
+                    <td><br /> &nbsp; T_Price <br /><br /> </td>
+                    <td><br /> &nbsp; Image <br /><br /> </td>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var s in Model)
+                {
+
+                    <tr style="border:1px solid black">
+                        <td style="padding:10px;padding-left:10px"> @s.p_Id</td>
+                        <td style="padding:10px"> @s.user_Id</td>
+                        <td style="padding:10px"> @s.cname</td>
+                        <td style="padding:10px"> @s.sub_name</td>
+                        <td style="padding:10px"> @s.code_num</td>
+                        <td style="padding:10px"> @s.size</td> 
+                        <td style="padding:10px"> @s.color</td> 
+                        <td style="padding:10px"> @s.stock</td> 
+                        <td style="padding:10px"> @s.t_amount</td> 
+                        <td style="padding:10px"> @s.images</td> 
+
+
+                        <td>
+
+                            &nbsp; &nbsp; &nbsp; <a href="/Admin/Delete/@s.p_Id"> Delete </a>
+                            &nbsp; &nbsp; &nbsp; <a href="/Admin/Update/@s.p_Id"> Update </a>
+
+                        </td>
+                    </tr>
+
+                }
+
+            </tbody>
+        </table>
+    </div>
+<!---->
+<!---->
+<div class="col-md-9 product-price1">
+
+    <div class="product-right-top">
+        <div class="top-product">
+
+
+
+
+            <div class="col-md-4 chain-grid simpleCart_shelfItem">
+                <div class="grid-span-1">
+
+                </div>
+                <div class="grid-chain-bottom ">
+
+                    <div class="star-price">
+                        <div class="price-at">
+
+
+
+
+
+                        </div>
+
+                        <div class="clearfix"> </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 chain-grid simpleCart_shelfItem">
+                <div class="grid-span-1">
+
+                </div>
+                <div class="grid-chain-bottom ">
+
+                    <div class="star-price">
+                        <div class="price-at">
+
+                        </div>
+
+                        <div class="clearfix"> </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 chain-grid simpleCart_shelfItem">
+                <div class="grid-span-1">
+
+                </div>
+                <div class="grid-chain-bottom ">
+
+                    <div class="star-price">
+                        <div class="price-at">
+
+                        </div>
+                        <div class="price-at-bottom ">
+                            <span class="item_price"></span>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+    <div class="clearfix"> </div>
+</div>
+
+<div class="clearfix"> </div>
+
+<div class="shipping">
+    <div class="col-md-3 col-md1">
+        <div class=" phone">
+
+            <div class="num">
+                <span>8(802)234-5678</span>
+                <p>Monday - Saturday: 8am - 5pm PST</p>
+            </div>
+            <i class="phone-in"> </i>
+            <div class="clearfix"> </div>
+        </div>
+
+    </div>
+    <div class="col-md-5 col-md2">
+        <div class=" phone1">
+
+            <i class="phone-in1"> </i>
+            <div class="num1">
+                <span>Free Shipping</span>
+                <p>on all orders over $99</p>
+            </div>
+            <a class="learn-in" href="../../Home/four">Learn More</a>
+            <div class="clearfix"> </div>
+        </div>
+
+    </div>
+    <div class="col-md-4 col-md3">
+        <div class=" phone2">
+
+
+            <div class="num2">
+                <span>Crazy Sale!</span>
+                <p>on selected items</p>
+            </div>
+            <a class="learn-in1" href="../../Home/four">Learn More</a>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="clearfix"> </div>
+</div>
+
+    </div>
+
+<!---->
+</div>
+
+<script src="../../Content/js/simpleCart.min.js"> </script>
+<!---->
